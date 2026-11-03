@@ -5,10 +5,13 @@
 
 // This can be used to set the Particles Effects. Check README for more details!
 document.addEventListener('DOMContentLoaded', function () {
+  // Maintainer: Hamdy Abou El Anein — hamdy.aea@protonmail.com
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   particleground(document.getElementById('particles'), {
     dotColor: '#5cbdaa',
     lineColor: '#5cbdaa'
   });
+  }
   var intro = document.getElementById('intro');
   intro.style.marginTop = - intro.offsetHeight / 2 + 'px';
 }, false);
